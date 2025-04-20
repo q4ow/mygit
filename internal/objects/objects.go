@@ -12,6 +12,11 @@ type Object struct {
 	Size    int64
 }
 
+type ObjectInterface interface {
+	Hash() string
+	Serialize() string
+}
+
 type Blob struct {
 	Object
 }

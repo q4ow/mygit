@@ -62,7 +62,7 @@ func Commit(message string) error {
 	return nil
 }
 
-func storeObject(obj objects.Object) error {
+func storeObject(obj objects.ObjectInterface) error {
 	objDir := filepath.Join(objectsDir, obj.Hash()[:2])
 	if err := os.MkdirAll(objDir, 0755); err != nil {
 		return err
